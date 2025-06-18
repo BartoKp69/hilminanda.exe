@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Kegiatan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 40px 20px;
+      opacity: 0;
+      animation: fadeIn 1.8s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card .description {
+      padding: 15px;
+      color: #555;
+    }
+
+     /* Tombol kembali di kiri bawah */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 12px 20px;
+      color: rgb(104, 104, 104);
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s, transform 0.2s;
+      z-index: 999;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galeri Kegiatan</h1>
+
+  <div class="gallery">
+
+    <div class="card">
+      <img src="valo.jpg" alt="Kegiatan 1">
+      <div class="description">
+        <strong>Pelatihan Kepemimpinan</strong><br>
+        Kegiatan pelatihan untuk meningkatkan kemampuan organisasi dan komunikasi anggota.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="4.jpg" alt="Kegiatan 2">
+      <div class="description">
+        <strong>Seminar Edukasi</strong><br>
+        Seminar terbuka dengan topik pengembangan karir dan soft skill.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="3.jpg" alt="Kegiatan 3">
+      <div class="description">
+        <strong>Outbound Team Building</strong><br>
+        Kegiatan luar ruang untuk mempererat kekompakan tim dan leadership.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="2.jpg" alt="Kegiatan 4">
+      <div class="description">
+        <strong>Aksi Sosial</strong><br>
+        Bakti sosial dan pengabdian masyarakat bersama relawan.
+      </div>
+    </div>
+
+  </div>
+ <a href="javascript:history.back()" class="back-button">Go Back</a>
+</body>
+</html>
